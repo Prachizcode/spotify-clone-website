@@ -1,0 +1,148 @@
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+
+   <title>Spotify Web Player: Music for Everyone</title>
+
+   <!-- Preconnect Links for Performance -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+   <!-- Google Font -->
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div id="mainPage">
+   <div class="main">
+      <!-- Sidebar Section -->
+      <aside class="sidebar">
+
+         <nav class="nav">
+            <div class="nav-option">
+               <div class="logo_div">
+               <img src="logo.png" class="nav_logo"  alt="spotify"/>
+               <h2>Spotify</h2>
+            </div>
+
+            
+               
+            </div>
+            </nav>
+            <div class="nav-option">
+               <i class="fa-solid fa-house"></i>
+               <a href="#">Home</a>
+            </div>
+           
+            <div class="nav-option">
+               <i class="fa-solid fa-magnifying-glass"></i>
+               <a href="#">Search</a>
+            </div>
+         </nav>
+
+         <section class="library">
+            <div class="option">
+               <div class="lib-option nav-option">
+                  <i class="fa-solid fa-book"></i>
+                  <a href="#">Your Library</a>
+               </div>
+               <div class="icons">
+                  <i class="fa-solid fa-plus"></i>
+                  <i class="fa-solid fa-arrow-right"></i>
+               </div>
+            </div>
+            <div class="lib-box">
+               <div class="box">
+                  <p class="box-p1">Create your first playlist</p>
+                  <p class="box-p2">It's easy, we'll help you.</p>
+                  <button class="badge">Create Playlist</button>
+               </div>
+               <div class="box">
+                  <p class="box-p1">Let's find some podcasts to follow</p>
+                  <p class="box-p2">We'll help you stay updated on new episodes.</p>
+                  <button class="badge">Browse Podcasts</button>
+               </div>
+            </div>
+         </section>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+         <header class="sticky-nav">
+            <div class="sticky-nav-icons">
+               <img src="backward_icon.png" alt="Backward Icon">
+               <img src="forward_icon.png" class="hide" alt="Forward Icon" onclick="goBackToMain()" id="forwardIcon">
+
+            </div>
+            <div class="sticky-nav-options">
+               <div id="searchSection">
+                  <input id="searchInput" placeholder="What you want to listen" />
+                  <button onclick="searchSong()">Search</button>
+                </div>
+          
+               <button class="badge nav-item">Explore Premium</button>
+               <button class="badge nav-item ">
+                  <i class="fa-regular fa-circle-down"></i> Install App
+               </button>
+               <i class="fa-regular fa-user nav-item" aria-label="User Profile"></i>
+            </div>
+         </header> 
+
+         <div id="results" class="hidden">
+               </div>
+               <div id="artistAlbums" class="hidden">
+                  <h2>Featured Artists</h2>
+                
+                  <div id="arijitContainer" class="artist-section" onclick="loadArtistSongs('Arijit Singh', 'arijitContainer')">
+                     <div class="artist-header">
+                       <img src="arijit.jpeg" alt="Arijit Singh" class="artist-photo">
+                       <h3>Arijit Singh</h3>
+                     </div>
+                   </div>
+                   
+                
+                  <div id="taylorContainer" class="artist-section" onclick="loadArtistSongs('Taylor Swift', 'taylorContainer')">
+                    <div class="artist-header"> <img src="taylor.jpeg" alt="Arijit Singh" class="artist-photo">
+                    <h3>Taylor Swift</h3></div>
+
+                  </div>
+                
+                  <div id="jubinContainer" class="artist-section" onclick="loadArtistSongs('Jubin Nautiyal', 'jubinContainer')">
+                     <div class="artist-header"> <img src="jubin.jpeg" alt="Arijit Singh" class="artist-photo">
+                    <h3>Jubin Nautiyal</h3></div>
+                  </div>
+                
+                  <div id="shreyaContainer" class="artist-section" onclick="loadArtistSongs('Shreya Ghoshal', 'shreyaContainer')">
+                     <div class="artist-header"> <img src="shreya.jpeg" alt="Arijit Singh" class="artist-photo">
+                     <h3>Shreya Ghoshal</h3></div>
+                  </div>
+                </div>
+               
+
+             </div>
+         </div>
+         <!--center-->
+          
+         <!-- Footer -->
+         <footer class="footer">
+            <div class="line"></div>
+         </footer>
+      </main>
+     
+   </div>
+</div>
+  
+   
+   <script src="spotify.js"></script>
+</body>
+</html> 
+
+
